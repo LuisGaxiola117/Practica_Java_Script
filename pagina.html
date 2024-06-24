@@ -1,31 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>To-Do-List</title>
+    <title>To-Do List</title>
     <link rel="stylesheet" href="style.css">
-  
 </head>
 <body>
     <header style="color: aliceblue; font-size: larger; padding-left: 45%;">To Do List</header>
-    <div class="div_borde" >
-        <div id="miLista" >
-            <header style="padding-bottom: 15px;"> Lista de pendientes</header>
-  <ul >      
-    <li>Completar la asignación de matemáticas. <input type="checkbox"></li>
-    <li>Comprar víveres en el supermercado.<input type="checkbox"></li>
-    <li>Llamar al médico para programar una cita<input type="checkbox"></li>
-    <li>Hacer ejercicio durante 30 minutos<input type="checkbox"></li>
-    <li>Leer un capítulo de tu libro favorito.<input type="checkbox"></li>
-    <li>Organizar el escritorio y limpiar la habitación<input type="checkbox"></li>
-</ul>
+    <div class="div_borde">
+        <div id="miLista">
+            <header style="padding-bottom: 15px;">Lista de pendientes</header>
+            <ul>
+                <li>Completar la asignación de matemáticas. <input type="checkbox" onclick="moverElemento(this)"></li>
+                <li>Comprar víveres en el supermercado. <input type="checkbox" onclick="moverElemento(this)"></li>
+                <!-- Agrega más elementos aquí -->
+            </ul>
+            <h3>Lista de Hechos</h3>
+            <ul id="otraLista">
+                <!-- Aquí se moverán los elementos -->
+            </ul>
+        </div>
     </div>
+    <div>
+        <form action="">
+            <input type="text" id="input" placeholder="Añadir tarea">
+            <button onclick="agregarElemento()">Agregar Elemento</button>
+        </form>
     </div>
-<div >
-    <form action="">
-    <input type="text" id="input" placeholder="Añadir tarea">
-    <button onclick="agregarElemento()">Agregar Elemento</button>
-</form>
-</div>
-<script src="engine.js"></script>
+    
+    <script src="engine.js"></script>
 </body>
 </html>
